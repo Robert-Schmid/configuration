@@ -1,4 +1,4 @@
-hell
+# Nushell
 # https://nushell.sh
 
 # Paths
@@ -15,7 +15,7 @@ prompt = 'starship prompt'
 
 # Startup
 startup = [
-
+  '''
   # Aliases
   alias @ = fork
   alias p = echo
@@ -92,7 +92,7 @@ startup = [
 
   # Web browser
   alias b = fork google-chrome-stable
-
+  '''
 ]
 
 

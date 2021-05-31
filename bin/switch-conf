@@ -34,7 +34,7 @@ cp $from/broot/conf.toml $to/broot/
 # git
 
 cp $from/git/gitconfig $home/
-mv $home/gitconfig .gitconfig
+mv $home/gitconfig $home/.gitconfig
 
 # nu
 
