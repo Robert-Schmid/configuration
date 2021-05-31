@@ -1,13 +1,30 @@
 #!/bin/sh
 
+# needs root for nix configuration
+# thus set a home dir
+
+### etc files
+
+from=/home/robert/configuration/etc
+to=/etc
+
 # nixos
 
-cp /home/robert/configuration/etc/nixos/configuration.nix /etc/nixos/
+cp $from/nixos/configuration.nix $to/nixos/
+
+### config files
+
+from=/home/robert/configuration/config
+to=/home/robert/.config
 
 # sway
 
-cp /home/robert/configuration/config/sway/config /home/robert/.config/sway/
+cp $from/sway/config $to/sway/
+
+# alacritty
+
+cp $from/alacritty/alacritty.yml $to/alacritty/
 
 # broot
 
-cp /home/robert/configuration/config/broot/conf.toml /home/robert/.config/broot/
+cp $from/broot/conf.toml $to/broot/
