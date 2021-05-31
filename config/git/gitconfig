@@ -1,3 +1,13 @@
 [user]
-	name = Robert Schmid
-	email = robert.schmid4@gmail.com
+  name = Robert Schmid
+  email = robert.schmid4@gmail.com
+
+[core]
+  editor = neovim
+
+[alias]
+  st = status
+  d = diff
+  ci = commit
+  cm = commit --message
+  co = checkout

@@ -19,7 +19,7 @@ cp ~/.config/broot/conf.toml ~/configuration/config/broot
 # git
 
 cp ~/.gitconfig ~/configuration/config/git
-mv ~/configuration/config/git/.gitconfig ~/configuration/config/git/gitconfig
+mv -f ~/configuration/config/git/.gitconfig ~/configuration/config/git/gitconfig
 
 #nu 
 
