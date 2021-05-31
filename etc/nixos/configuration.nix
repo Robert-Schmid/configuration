@@ -279,17 +279,17 @@
 #    dash # http://gondor.apana.org.au/~herbert/dash/
 
     # Shell prompts
-#    starship # https://starship.rs
+    starship # https://starship.rs
 
     # Text editors ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
     kakoune # https://kakoune.org
 #    kak-lsp # https://github.com/kak-lsp/kak-lsp
-    vim
+    neovim # https://neovim.io/ 
 
     # File managers ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
-    dolphin # https://apps.kde.org/en/dolphin
+    # dolphin # https://apps.kde.org/en/dolphin
     broot # https://dystroy.org/broot/
     # xplr
     # https://github.com/sayanarijit/xplr
@@ -299,8 +299,8 @@
     # Git ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
     git # https://git-scm.com
-#    gitAndTools.gh # https://cli.github.com
-#    gitAndTools.gitui # https://github.com/extrawurst/gitui
+    gitAndTools.gh # https://cli.github.com
+    gitAndTools.gitui # https://github.com/extrawurst/gitui
 
     # Email clients ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
@@ -354,7 +354,7 @@
 
     # Desktop environments ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
-    plasma-desktop # https://kde.org
+    # plasma-desktop # https://kde.org
 
     # Display managers
 #    sddm # https://github.com/sddm/sddm
@@ -407,6 +407,7 @@
 
     # Virtualization ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
+    kubectl # https://kubernetes.io/docs/reference/kubectl/overview/
     docker # https://docker.com
 #    appimage-run # https://github.com/NixOS/nixpkgs/tree/master/pkgs/tools/package-management/appimage-run
 
@@ -426,7 +427,7 @@
 
     # Utils ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
-#    file # https://darwinsys.com/file/
+    file # https://darwinsys.com/file/
 #    socat # http://www.dest-unreach.org/socat/
 
     # Filesystem
