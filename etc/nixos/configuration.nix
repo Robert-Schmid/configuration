@@ -195,25 +195,48 @@
     keyMap = "us";
   };
 
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
-
-  # Enable the GNOME 3 Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome3.enable = true;
-
-  # Configure keymap in X11
-  services.xserver.layout = "us";
-  services.xserver.xkbOptions = "eurosign:e";
-
-  # Enable touchpad support (enabled default in most desktopManager).
-  # services.xserver.libinput.enable = true;
-
-
   # Enable docker
   virtualisation.docker.enable = true;
   virtualisation.docker.enableNvidia = true;
   hardware.opengl.driSupport32Bit = true;
+
+  # Window Manager ─────────────────────────────────────────────────────────────
+
+ # X11 / GNOME
+
+  # Enable the X11 windowing system.
+  # services.xserver.enable = true;
+
+  # Enable the GNOME 3 Desktop Environment.
+  # services.xserver.displayManager.gdm.enable = true;
+  # services.xserver.desktopManager.gnome3.enable = true;
+
+  # Configure keymap in X11
+  # services.xserver.layout = "us";
+  # services.xserver.xkbOptions = "eurosign:e";
+
+  # Enable touchpad support (enabled default in most desktopManager).
+  # services.xserver.libinput.enable = true;
+
+ # Wayland / Sway
+
+  # Wayland compositors
+  # Sway
+  # https://swaywm.org
+  programs.sway.enable = true;
+
+  # Desktop environments
+  # https://kde.org
+  #
+  # Note: KDE apps need `XDG_CURRENT_DESKTOP=kde` for non-KDE desktops.
+  services.xserver.desktopManager.plasma5.enable = true;
+
+  # Backlight
+  programs.light.enable = true;
+
+  # Redshift
+  services.redshift.enable = true;
+  services.redshift.package = pkgs.redshift-wlr;
 
  # Packages ───────────────────────────────────────────────────────────────────
 
@@ -223,8 +246,8 @@
 
     # Terminals ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
-#    alacritty # https://github.com/alacritty/alacritty
-#    konsole # https://konsole.kde.org
+    alacritty # https://github.com/alacritty/alacritty
+    konsole # https://konsole.kde.org
 
     # Terminal multiplexers
     # zellij
@@ -252,7 +275,7 @@
 
     # Shells ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
-#    nushell # https://nushell.sh
+    nushell # https://nushell.sh
 #    dash # http://gondor.apana.org.au/~herbert/dash/
 
     # Shell prompts
@@ -260,14 +283,14 @@
 
     # Text editors ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
-#    kakoune # https://kakoune.org
+    kakoune # https://kakoune.org
 #    kak-lsp # https://github.com/kak-lsp/kak-lsp
     vim
 
     # File managers ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
-#    dolphin # https://apps.kde.org/en/dolphin
-#    broot # https://dystroy.org/broot/
+    dolphin # https://apps.kde.org/en/dolphin
+    broot # https://dystroy.org/broot/
     # xplr
     # https://github.com/sayanarijit/xplr
     # sidetree
@@ -322,7 +345,7 @@
 
     # Document viewers ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
-#    zathura # https://pwmt.org/projects/zathura/
+    zathura # https://pwmt.org/projects/zathura/
 
     # Document converters
 #    pandoc # https://pandoc.org
@@ -331,39 +354,39 @@
 
     # Desktop environments ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
-#    plasma-desktop # https://kde.org
+    plasma-desktop # https://kde.org
 
     # Display managers
 #    sddm # https://github.com/sddm/sddm
 
     # Networking
-#    networkmanager # https://wiki.gnome.org/Projects/NetworkManager
+    networkmanager # https://wiki.gnome.org/Projects/NetworkManager
 
     # Audio
-#    pavucontrol # https://freedesktop.org/software/pulseaudio/pavucontrol/
+    pavucontrol # https://freedesktop.org/software/pulseaudio/pavucontrol/
 
     # Backlight
-#    light # https://haikarainen.github.io/light/
-#    redshift-wlr # http://jonls.dk/redshift/ (Wayland patch)
+    light # https://haikarainen.github.io/light/
+    redshift-wlr # http://jonls.dk/redshift/ (Wayland patch)
 
     # Wayland ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
     # Wayland
-#    wayland # https://wayland.freedesktop.org
-#    xwayland # https://wayland.freedesktop.org/xserver.html
+    wayland # https://wayland.freedesktop.org
+    xwayland # https://wayland.freedesktop.org/xserver.html
 
     # Sway
-#    sway # https://swaywm.org
-#    swaybg # https://github.com/swaywm/swaybg
-#    swayidle # https://github.com/swaywm/swayidle
-#    swaylock # https://github.com/swaywm/swaylock
+    sway # https://swaywm.org
+    swaybg # https://github.com/swaywm/swaybg
+    swayidle # https://github.com/swaywm/swayidle
+    swaylock # https://github.com/swaywm/swaylock
 
     # Services
 #    kanshi # Output configuration – https://wayland.emersion.fr/kanshi/
-#    mako # Notifications – https://wayland.emersion.fr/mako/
+    mako # Notifications – https://wayland.emersion.fr/mako/
 
     # Clipboard
-#    wl-clipboard # https://github.com/bugaevc/wl-clipboard
+    wl-clipboard # https://github.com/bugaevc/wl-clipboard
 
     # Screenshots
 #    grim # https://wayland.emersion.fr/grim/
@@ -450,9 +473,9 @@
 
     # Rust
     # https://rust-lang.org
-#    rustc
-#    cargo # https://crates.io
-#    rustup # https://rustup.rs
+    rustc
+    cargo # https://crates.io
+    rustup # https://rustup.rs
 
     # JavaScript
 #    nodejs_latest # https://nodejs.org
