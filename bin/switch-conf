@@ -3,6 +3,8 @@
 # needs root for nix configuration
 # thus set a home dir
 
+home=/home/robert
+
 ### etc files
 
 from=/home/robert/configuration/etc
@@ -28,3 +30,12 @@ cp $from/alacritty/alacritty.yml $to/alacritty/
 # broot
 
 cp $from/broot/conf.toml $to/broot/
+
+# git
+
+cp $from/git/gitconfig $home/
+mv $home/gitconfig .gitconfig
+
+# nu
+
+cp $from/nu/config.toml $to/nu/

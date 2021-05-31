@@ -15,3 +15,13 @@ cp ~/.config/alacritty/alacritty.yml ~/configuration/config/alacritty
 # broot
 
 cp ~/.config/broot/conf.toml ~/configuration/config/broot
+
+# git
+
+cp ~/.gitconfig ~/configuration/config/git
+mv ~/configuration/config/git/.gitconfig ~/configuration/config/git/gitconfig
+
+#nu 
+
+cp ~/.config/nu/config.toml ~/configuration/config/nu
+
