@@ -1,0 +1,13 @@
+#!/bin/sh
+
+# nixos
+
+cp /home/robert/configuration/etc/nixos/configuration.nix /etc/nixos/
+
+# sway
+
+cp /home/robert/configuration/config/sway/config /home/robert/.config/sway/
+
+# broot
+
+cp /home/robert/configuration/config/broot/conf.toml /home/robert/.config/broot/
