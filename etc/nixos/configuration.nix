@@ -67,11 +67,6 @@
   location.longitude = 9.1732;
 
 
-  # Unfree
-  # Allow VirtualBox, Discord…
-  nixpkgs.config.allowUnfree = true;
-
-
   # Security
   # Do not prompt for password
 #  security.sudo.wheelNeedsPassword = false;
@@ -240,6 +235,19 @@
 
  # Packages ───────────────────────────────────────────────────────────────────
 
+  # Unfree
+  # Discord, Chrome, etc
+  nixpkgs.config = {
+    allowUnfree = true;
+
+    # create an alias for the unstable channel
+    packageOverrides = pkgs: {
+      unstable = import <nixos-unstable> {
+        config = config.nixpkgs.config;
+      };
+    };
+  };
+
   # https://search.nixos.org/packages
 
   environment.systemPackages = with pkgs; [
@@ -276,7 +284,7 @@
 
     # Shells ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
-    nushell # https://nushell.sh
+    unstable.nushell # https://nushell.sh
 #    dash # http://gondor.apana.org.au/~herbert/dash/
 
     # Shell prompts
