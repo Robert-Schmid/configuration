@@ -3,7 +3,8 @@
 
 # Paths
 path = [
-  '/home/robert/configuration/bin'
+  '/home/robert/configuration/bin',
+  '/home/robert/.local/bin',
 ]
 
 # Options
@@ -15,12 +16,26 @@ prompt = 'starship prompt'
 
 # Startup
 startup = [
-  '''
+ '''
+  # TTY settings
+  if $(= linux != $nu.env.TERM) {} {
+    # Color scheme
+    # https://draculatheme.com/tty
+    #sh ~/repositories/github.com/dracula/tty/dracula-tty.sh
+
+    # Fonts
+    # /run/current-system/sw/share/consolefonts
+    setfont Lat2-Terminus16
+  }
+
   # Aliases
-  alias @ = fork
+  #alias @ = fork
   alias p = echo
   alias _ = rm -rf
   alias md = mkdir
+
+  # NeoVim
+  alias vim = nvim
 
   # NixOS
   # https://nixos.org
@@ -29,9 +44,9 @@ startup = [
   alias nix-gc = sudo nix-collect-garbage --delete-old
 
   # Sleep
-#  alias z = sudo systemctl suspend
-#  alias zz = swaymsg exit
-#  alias zzz = sudo shutdown now
+  #alias z = sudo systemctl suspend
+  #alias zz = swaymsg exit
+  #alias zzz = sudo shutdown now
 
   # procs
   # https://github.com/dalance/procs
@@ -57,6 +72,10 @@ startup = [
   # https://github.com/BurntSushi/ripgrep
   alias grep = rg
 
+  # curl
+  # https://curl.haxx.se
+  #alias curl = curl -sSL
+
   # Git
   # https://git-scm.com
   alias g = git
@@ -69,6 +88,15 @@ startup = [
   # gitui
   # https://github.com/extrawurst/gitui
   alias G = gitui
+
+  # GitHub CLI
+  # https://cli.github.com
+  alias gist = gh gist create --web
+  alias gv = gh repo view --web
+
+  def gc [repository] {
+    gh repo clone $repository `~/repositories/github.com/{{$repository}}`
+  }
 
   # Broot
   # https://dystroy.org/broot/
@@ -91,8 +119,13 @@ startup = [
   alias ta = exa --tree --all
 
   # Web browser
-  alias b = fork google-chrome-stable
+  #alias b = fork chromium
   '''
 ]
 
+# Environment variables
+[env]
 
+# Applications
+EDITOR = 'nvim'
+BROWSER = 'google-chrome-stable'
