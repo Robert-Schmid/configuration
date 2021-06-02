@@ -136,6 +136,10 @@
     ];
   };
 
+  users.extraUsers.robert = {
+    shell = pkgs.nushell;
+  };
+
   # Services ───────────────────────────────────────────────────────────────────
 
   # Login
