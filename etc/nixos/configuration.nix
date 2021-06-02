@@ -266,7 +266,7 @@
     # https://zellij.dev
     # tab-rs
     # https://github.com/austinjones/tab-rs
-#    pueue # https://github.com/Nukesor/pueue
+    pueue # https://github.com/Nukesor/pueue
 
     # Fuzzy finders
     fzf # https://github.com/junegunn/fzf
@@ -284,7 +284,6 @@
     procs # ps – https://github.com/dalance/procs
     htop # top – https://htop.dev
     wget
-    forktty
 
     # Shells ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 

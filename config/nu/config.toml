@@ -29,7 +29,7 @@ startup = [
   }
 
   # Aliases
-  #alias @ = fork
+  alias @ = fork
   alias p = echo
   alias _ = rm -rf
   alias md = mkdir
@@ -119,7 +119,7 @@ startup = [
   alias ta = exa --tree --all
 
   # Web browser
-  #alias b = fork chromium
+  alias b = fork google-chrome-stable
   '''
 ]
 
