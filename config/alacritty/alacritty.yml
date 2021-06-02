@@ -1,0 +1,11 @@
+# Alacritty
+# https://github.com/alacritty/alacritty
+
+
+# Appearance ───────────────────────────────────────────────────────────────────
+
+# Add a bit of transparency to reduce eye strain.
+background_opacity: 0.99
+
+font:
+  size: 12.0
