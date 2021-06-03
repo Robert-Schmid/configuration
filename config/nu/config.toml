@@ -37,6 +37,9 @@ startup = [
   # NeoVim
   alias vim = nvim
 
+  # Kakoune
+  alias k = kak
+
   # Document Viewer
   # https://pwmt.org/projects/zathura/
   alias doc = zathura
@@ -48,9 +51,9 @@ startup = [
   alias nix-gc = sudo nix-collect-garbage --delete-old
 
   # Sleep
-  #alias z = sudo systemctl suspend
+  alias z = sudo systemctl suspend
   #alias zz = swaymsg exit
-  #alias zzz = sudo shutdown now
+  alias zzz = sudo shutdown now
 
   # procs
   # https://github.com/dalance/procs
