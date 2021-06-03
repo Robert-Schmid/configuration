@@ -37,6 +37,10 @@ startup = [
   # NeoVim
   alias vim = nvim
 
+  # Document Viewer
+  # https://pwmt.org/projects/zathura/
+  alias doc = zathura
+
   # NixOS
   # https://nixos.org
   alias nix-update = sudo nixos-rebuild switch
