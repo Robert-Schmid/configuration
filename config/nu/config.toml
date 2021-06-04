@@ -127,6 +127,9 @@ startup = [
 
   # Web browser
   alias b = fork google-chrome-stable
+
+  # Discord
+  alias Di = fork Discord
   '''
 ]
 

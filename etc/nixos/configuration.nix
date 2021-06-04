@@ -267,6 +267,8 @@
     # tab-rs
     # https://github.com/austinjones/tab-rs
     pueue # https://github.com/Nukesor/pueue
+    tmux
+    tmux-xpanes #https://github.com/greymd/tmux-xpanes
 
     # Fuzzy finders
     fzf # https://github.com/junegunn/fzf
