@@ -259,7 +259,6 @@
     # Terminals ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
     alacritty # https://github.com/alacritty/alacritty
-    konsole # https://konsole.kde.org
 
     # Terminal multiplexers
     # zellij
@@ -329,14 +328,15 @@
 
 #    thelounge # https://thelounge.chat
 
+    # E-Books ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+
+    calibre # https://calibre-ebook.com/
+
     # Web browsers ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
     chromium # https://chromium.org
     google-chrome # https://google.com/chrome/
     # firefox # https://mozilla.org/firefox/
-    # opera # https://opera.com
-    # vivaldi # https://vivaldi.com
-    # brave # https://brave.com
 
     # Media players ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
@@ -353,11 +353,6 @@
 
 #    olive-editor # https://olivevideoeditor.org
 
-    # Image editors ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-
-#    inkscape # https://inkscape.org
-#    gimp # https://gimp.org
-
     # Document viewers ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
     zathura # https://pwmt.org/projects/zathura/
@@ -368,11 +363,6 @@
     # img2pdf # https://gitlab.mister-muffin.de/josch/img2pdf
 
     # Desktop environments ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-
-    # plasma-desktop # https://kde.org
-
-    # Display managers
-#    sddm # https://github.com/sddm/sddm
 
     # Networking
     networkmanager # https://wiki.gnome.org/Projects/NetworkManager
