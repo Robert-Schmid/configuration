@@ -286,6 +286,7 @@
     procs # ps – https://github.com/dalance/procs
     htop # top – https://htop.dev
     wget
+    neofetch # https://github.com/dylanaraps/neofetch
 
     # Shells ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
