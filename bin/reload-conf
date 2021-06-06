@@ -25,3 +25,6 @@ mv -f ~/configuration/config/git/.gitconfig ~/configuration/config/git/gitconfig
 
 cp ~/.config/nu/config.toml ~/configuration/config/nu
 
+# ssh
+
+cp ~/.ssh/config ~/configuration/config/ssh

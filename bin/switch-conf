@@ -39,3 +39,7 @@ mv $home/gitconfig $home/.gitconfig
 # nu
 
 cp $from/nu/config.toml $to/nu/
+
+# ssh
+
+cp $from/ssh/config $home/.ssh
