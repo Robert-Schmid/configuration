@@ -12,7 +12,7 @@ to=/etc
 
 # nixos
 
-cp $from/nixos/configuration.nix $to/nixos/
+sudo cp $from/nixos/configuration.nix $to/nixos/
 
 ### config files
 
@@ -21,7 +21,7 @@ to=/home/robert/.config
 
 # sway
 
-cp $from/sway/config $to/sway/
+sudo cp $from/sway/config $to/sway/
 
 # alacritty
 
