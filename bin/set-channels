@@ -1,0 +1,13 @@
+# !/bin/sh
+
+# Show current channels
+echo "Current Channels"
+sudo nix-channel --list
+
+# Set channels here:
+sudo nix-channel --add https://nixos.org/channels/nixos-21.05 nixos
+sudo nix-channel --add https://nixos.org/channels/nixos-unstable nixos-unstable
+
+# Show the new channels"
+echo "New Channels"
+sudo nix-channel --list
