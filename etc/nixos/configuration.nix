@@ -1,4 +1,4 @@
-# NixOS
+NixOS
 # https://nixos.org/manual/nixos/stable/
 # https://search.nixos.org/packages
 # https://search.nixos.org/options
@@ -201,41 +201,44 @@
 
   # Window Manager ─────────────────────────────────────────────────────────────
 
- # X11 / GNOME
-
-  # Enable the X11 windowing system.
-  # services.xserver.enable = true;
-
-  # Enable the GNOME 3 Desktop Environment.
-  # services.xserver.displayManager.gdm.enable = true;
-  # services.xserver.desktopManager.gnome3.enable = true;
-
-  # Configure keymap in X11
-  # services.xserver.layout = "us";
-  # services.xserver.xkbOptions = "eurosign:e";
-
-  # Enable touchpad support (enabled default in most desktopManager).
-  # services.xserver.libinput.enable = true;
-
  # Wayland / Sway
 
   # Wayland compositors
   # Sway
   # https://swaywm.org
-  programs.sway.enable = true;
+  # also see: https://nixos.wiki/wiki/Sway
+  programs.sway = {
+    enable = true;
+    wrapperFeatures.gtk = true; # so that gtk works properly
+    extraPackages = with pkgs; [
+      swaylock
+      swayidle
+      wl-clipboard
+      mako # notification daemon
+      alacritty # Alacritty is the default terminal in the config
+      wofi
+    ];
+  };
 
-  # Desktop environments
-  # https://kde.org
-  #
-  # Note: KDE apps need `XDG_CURRENT_DESKTOP=kde` for non-KDE desktops.
-  services.xserver.desktopManager.plasma5.enable = true;
+  wayland.windowManager.sway = {
+    enable = true;
+    wrapperFeatures.gtk = true ;
+  };
+  home.packages = with pkgs; [
+    swaylock
+    swayidle
+    wl-clipboard
+    mako # notification daemon
+    alacritty # Alacritty is the default terminal in the config
+    wofi
+  ];
 
   # Backlight
-  programs.light.enable = true;
+#  programs.light.enable = true;
 
   # Redshift
-  services.redshift.enable = true;
-  services.redshift.package = pkgs.redshift-wlr;
+#  services.redshift.enable = true;
+#  services.redshift.package = pkgs.redshift-wlr;
 
  # Packages ───────────────────────────────────────────────────────────────────
 
@@ -303,7 +306,6 @@
 
     # File managers ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
-    # dolphin # https://apps.kde.org/en/dolphin
     broot # https://dystroy.org/broot/
     # xplr
     # https://github.com/sayanarijit/xplr
@@ -371,14 +373,14 @@
     pavucontrol # https://freedesktop.org/software/pulseaudio/pavucontrol/
 
     # Backlight
-    light # https://haikarainen.github.io/light/
-    redshift-wlr # http://jonls.dk/redshift/ (Wayland patch)
+    #light # https://haikarainen.github.io/light/
+    #redshift-wlr # http://jonls.dk/redshift/ (Wayland patch)
 
     # Wayland ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
     # Wayland
     wayland # https://wayland.freedesktop.org
-    xwayland # https://wayland.freedesktop.org/xserver.html
+    #xwayland # https://wayland.freedesktop.org/xserver.html
 
     # Sway
     sway # https://swaywm.org
