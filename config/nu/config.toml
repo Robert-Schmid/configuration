@@ -42,7 +42,7 @@ startup = [
 
   # Document Viewer
   # https://pwmt.org/projects/zathura/
-  alias doc = zathura
+  alias doc = fork zathura
 
   # NixOS
   # https://nixos.org
