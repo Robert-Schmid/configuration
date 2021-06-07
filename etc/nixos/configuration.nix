@@ -1,4 +1,4 @@
-NixOS
+# NixOS
 # https://nixos.org/manual/nixos/stable/
 # https://search.nixos.org/packages
 # https://search.nixos.org/options
@@ -224,15 +224,7 @@ NixOS
     enable = true;
     wrapperFeatures.gtk = true ;
   };
-  home.packages = with pkgs; [
-    swaylock
-    swayidle
-    wl-clipboard
-    mako # notification daemon
-    alacritty # Alacritty is the default terminal in the config
-    wofi
-  ];
-
+ 
   # Backlight
 #  programs.light.enable = true;
 
