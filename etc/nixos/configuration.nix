@@ -218,7 +218,7 @@
     };
 
     displayManager = {
-      defaultSession = "none+i3"
+      defaultSession = "none+i3";
     };
 
     # use i3 gaps
@@ -228,7 +228,7 @@
       extraPackages = with pkgs; [
         i3status
         i3lock
-      ]
+      ];
     };
   };
 
