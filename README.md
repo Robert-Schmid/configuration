@@ -2,7 +2,7 @@
 
 ### Branch Info
 
-Working sway configuration for 20.09. But I have problems upgrading and Nvidia doesn't like linux so here we are...
+Try i3-gaps and X11 and upgrade to NixOs 21.05
 
 ___
 
