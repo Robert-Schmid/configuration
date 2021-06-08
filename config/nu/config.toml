@@ -20,7 +20,7 @@ startup = [
   # TTY settings
   # Fonts
   # /run/current-system/sw/share/consolefonts
-  setfont Lat2-Terminus16
+  #setfont Lat2-Terminus16
 
   # Aliases
   alias @ = fork
