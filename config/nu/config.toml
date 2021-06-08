@@ -18,15 +18,9 @@ prompt = 'starship prompt'
 startup = [
  '''
   # TTY settings
-  if $(= linux != $nu.env.TERM) {} {
-    # Color scheme
-    # https://draculatheme.com/tty
-    #sh ~/repositories/github.com/dracula/tty/dracula-tty.sh
-
-    # Fonts
-    # /run/current-system/sw/share/consolefonts
-    setfont Lat2-Terminus16
-  }
+  # Fonts
+  # /run/current-system/sw/share/consolefonts
+  setfont Lat2-Terminus16
 
   # Aliases
   alias @ = fork
@@ -107,14 +101,16 @@ startup = [
 
   # Broot
   # https://dystroy.org/broot/
-  def br [...rest] {
-    let path = $(broot --out /dev/stdout $rest | str trim)
-    let is_empty = $(= $path | empty?)
-    if $is_empty {} {
-      cd $path
-    }
-  }
-  alias . = br .
+  alias br = broot
+
+#  def br [...rest] {
+#    let path = $(broot --out /dev/stdout $rest | str trim)
+#    let is_empty = $(= $path | empty?)
+#    if $is_empty {} {
+#      cd $path
+#    }
+#  }
+#  alias . = br .
 
   # exa
   # https://the.exa.website
