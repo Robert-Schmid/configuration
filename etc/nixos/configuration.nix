@@ -207,18 +207,19 @@
   # Sway
   # https://swaywm.org
   # also see: https://nixos.wiki/wiki/Sway
-  programs.sway = {
-    enable = true;
-    wrapperFeatures.gtk = true; # so that gtk works properly
-    extraPackages = with pkgs; [
-      swaylock
-      swayidle
-      wl-clipboard
-      mako # notification daemon
-      alacritty # Alacritty is the default terminal in the config
-      wofi
-    ];
-  };
+  programs.sway.enable = true;
+#  programs.sway = {
+#    enable = true;
+#    wrapperFeatures.gtk = true; # so that gtk works properly
+#    extraPackages = with pkgs; [
+#      swaylock
+#      swayidle
+#      wl-clipboard
+#      mako # notification daemon
+#      alacritty # Alacritty is the default terminal in the config
+#      wofi
+#    ];
+#  };
 
  
   # Backlight
@@ -238,6 +239,9 @@
     # create an alias for the unstable channel
     packageOverrides = pkgs: {
       unstable = import <nixos-unstable> {
+        config = config.nixpkgs.config;
+      };
+      old = import <nixos-old> {
         config = config.nixpkgs.config;
       };
     };
@@ -367,21 +371,21 @@
     # Wayland ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
     # Wayland
-    wayland # https://wayland.freedesktop.org
+    old.wayland # https://wayland.freedesktop.org
     #xwayland # https://wayland.freedesktop.org/xserver.html
 
     # Sway
-    sway # https://swaywm.org
-    swaybg # https://github.com/swaywm/swaybg
-    swayidle # https://github.com/swaywm/swayidle
-    swaylock # https://github.com/swaywm/swaylock
+    old.sway # https://swaywm.org
+    old.swaybg # https://github.com/swaywm/swaybg
+    old.swayidle # https://github.com/swaywm/swayidle
+    old.swaylock # https://github.com/swaywm/swaylock
 
     # Services
 #    kanshi # Output configuration – https://wayland.emersion.fr/kanshi/
-    mako # Notifications – https://wayland.emersion.fr/mako/
+    old.mako # Notifications – https://wayland.emersion.fr/mako/
 
     # Clipboard
-    wl-clipboard # https://github.com/bugaevc/wl-clipboard
+    old.wl-clipboard # https://github.com/bugaevc/wl-clipboard
 
     # Screenshots
 #    grim # https://wayland.emersion.fr/grim/
