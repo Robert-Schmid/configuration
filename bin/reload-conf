@@ -6,7 +6,11 @@ cp /etc/nixos/configuration.nix ~/configuration/etc/nixos
 
 # sway
 
-cp -f ~/.config/sway/config ~/configuration/config/sway
+#cp -f ~/.config/sway/config ~/configuration/config/sway
+
+# i3
+
+cp ~/.config/i3/config ~/configuration/config/i3
 
 # alacritty
 

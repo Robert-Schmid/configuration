@@ -21,7 +21,11 @@ to=/home/robert/.config
 
 # sway
 
-sudo cp $from/sway/config $to/sway/
+#sudo cp $from/sway/config $to/sway/
+
+# i3
+
+cp $from/i3/config $to/i3
 
 # alacritty
 
