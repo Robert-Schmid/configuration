@@ -201,33 +201,41 @@
 
   # Window Manager ─────────────────────────────────────────────────────────────
 
+ # X11 / GNOME
+
+  # Enable the X11 windowing system.
+  # services.xserver.enable = true;
+
+  # Enable the GNOME 3 Desktop Environment.
+  # services.xserver.displayManager.gdm.enable = true;
+  # services.xserver.desktopManager.gnome3.enable = true;
+
+  # Configure keymap in X11
+  # services.xserver.layout = "us";
+  # services.xserver.xkbOptions = "eurosign:e";
+
+  # Enable touchpad support (enabled default in most desktopManager).
+  # services.xserver.libinput.enable = true;
+
  # Wayland / Sway
 
   # Wayland compositors
   # Sway
   # https://swaywm.org
-  # also see: https://nixos.wiki/wiki/Sway
   programs.sway.enable = true;
-#  programs.sway = {
-#    enable = true;
-#    wrapperFeatures.gtk = true; # so that gtk works properly
-#    extraPackages = with pkgs; [
-#      swaylock
-#      swayidle
-#      wl-clipboard
-#      mako # notification daemon
-#      alacritty # Alacritty is the default terminal in the config
-#      wofi
-#    ];
-#  };
 
- 
+  # Desktop environments
+  # https://kde.org
+  #
+  # Note: KDE apps need `XDG_CURRENT_DESKTOP=kde` for non-KDE desktops.
+  services.xserver.desktopManager.plasma5.enable = true;
+
   # Backlight
-#  programs.light.enable = true;
+  programs.light.enable = true;
 
   # Redshift
-#  services.redshift.enable = true;
-#  services.redshift.package = pkgs.redshift-wlr;
+  services.redshift.enable = true;
+  services.redshift.package = pkgs.redshift-wlr;
 
  # Packages ───────────────────────────────────────────────────────────────────
 
@@ -239,9 +247,6 @@
     # create an alias for the unstable channel
     packageOverrides = pkgs: {
       unstable = import <nixos-unstable> {
-        config = config.nixpkgs.config;
-      };
-      old = import <nixos-old> {
         config = config.nixpkgs.config;
       };
     };
@@ -298,6 +303,7 @@
 
     # File managers ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
+    # dolphin # https://apps.kde.org/en/dolphin
     broot # https://dystroy.org/broot/
     # xplr
     # https://github.com/sayanarijit/xplr
@@ -365,27 +371,27 @@
     pavucontrol # https://freedesktop.org/software/pulseaudio/pavucontrol/
 
     # Backlight
-    #light # https://haikarainen.github.io/light/
-    #redshift-wlr # http://jonls.dk/redshift/ (Wayland patch)
+    light # https://haikarainen.github.io/light/
+    redshift-wlr # http://jonls.dk/redshift/ (Wayland patch)
 
     # Wayland ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
     # Wayland
-    old.wayland # https://wayland.freedesktop.org
-    #xwayland # https://wayland.freedesktop.org/xserver.html
+    wayland # https://wayland.freedesktop.org
+    xwayland # https://wayland.freedesktop.org/xserver.html
 
     # Sway
-    old.sway # https://swaywm.org
-    old.swaybg # https://github.com/swaywm/swaybg
-    old.swayidle # https://github.com/swaywm/swayidle
-    old.swaylock # https://github.com/swaywm/swaylock
+    sway # https://swaywm.org
+    swaybg # https://github.com/swaywm/swaybg
+    swayidle # https://github.com/swaywm/swayidle
+    swaylock # https://github.com/swaywm/swaylock
 
     # Services
 #    kanshi # Output configuration – https://wayland.emersion.fr/kanshi/
-    old.mako # Notifications – https://wayland.emersion.fr/mako/
+    mako # Notifications – https://wayland.emersion.fr/mako/
 
     # Clipboard
-    old.wl-clipboard # https://github.com/bugaevc/wl-clipboard
+    wl-clipboard # https://github.com/bugaevc/wl-clipboard
 
     # Screenshots
 #    grim # https://wayland.emersion.fr/grim/
