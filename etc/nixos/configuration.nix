@@ -137,7 +137,7 @@
   };
 
   users.extraUsers.robert = {
-    shell = pkgs.nushell;
+    shell = pkgs.zsh;
   };
 
   # Services ───────────────────────────────────────────────────────────────────
@@ -287,6 +287,7 @@
 
     unstable.nushell # https://nushell.sh
 #    dash # http://gondor.apana.org.au/~herbert/dash/
+    zsh
 
     # Shell prompts
     starship # https://starship.rs
@@ -434,6 +435,8 @@
     # Filesystem
     gparted # https://gparted.org
     gptfdisk # https://rodsbooks.com/gdisk/
+    exfat
+    ntfs3g
 
     # Watchers
 #    inotify-tools # https://github.com/inotify-tools/inotify-tools
