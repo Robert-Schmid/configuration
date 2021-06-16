@@ -1,0 +1,108 @@
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.histfile
+HISTSIZE=1000
+SAVEHIST=1000
+setopt autocd beep nomatch notify
+unsetopt extendedglob
+bindkey -v
+# End of lines configured by zsh-newuser-install
+# The following lines were added by compinstall
+zstyle :compinstall filename '/home/robert/.zshrc'
+
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
+
+# Aliases
+  alias @=fork
+  alias p=echo
+  alias _="rm -rf"
+  alias md=mkdir
+
+# NeoVim
+  alias vim=nvim
+
+# Kakoune
+  alias k=kak
+
+# Document Viewer
+# https://pwmt.org/projects/zathura/
+  alias doc="fork zathura"
+
+# NixOS
+# https://nixos.org
+  alias nix-update="sudo nixos-rebuild switch"
+  alias nix-upgrade="sudo nixos-rebuild switch --upgrade --keep-going --fallback"
+  alias nix-gc="sudo nix-collect-garbage --delete-old"
+
+# Sleep
+  alias z="sudo systemctl suspend"
+  #alias zz="swaymsg exit"
+  alias zzz="sudo shutdown now"
+
+# procs
+# https://github.com/dalance/procs
+  alias ps=procs
+
+# htop
+# https://htop.dev
+  alias top=htop
+
+# rm
+  #alias rm = rm -rf --trash
+  #alias rm! = rm -rf ~/.local/share/Trash
+
+# bat
+# https://github.com/sharkdp/bat
+  alias cat=bat
+
+# fd
+# https://github.com/sharkdp/fd
+  alias find=fd
+
+# ripgrep
+# https://github.com/BurntSushi/ripgrep
+  alias grep=rg
+
+# curl
+# https://curl.haxx.se
+  #alias curl = curl -sSL
+
+# Git
+# https://git-scm.com
+  alias g=git
+
+# gitui
+# https://github.com/extrawurst/gitui
+  alias G=gitui
+
+# GitHub CLI
+# https://cli.github.com
+  alias gist="gh gist create --web"
+  alias gv="gh repo view --web"
+  gc () {
+     gh repo clone $1 `~/repositories/github.com/{{$1}}`
+  }
+
+# Broot
+# https://dystroy.org/broot/
+  #alias br = broot
+
+# exa
+# https://the.exa.website
+  alias l="exa --icons"
+  alias la="exa --icons --all"
+  alias ll="exa --icons --git --long"
+  alias lla="exa --icons --git --long --all"
+  alias T="exa --tree"
+  alias ta="exa --tree --all"
+
+# Web browser
+  alias b="fork google-chrome-stable"
+
+# Discord
+  alias Di="fork Discord"
+
+# Starship Prompt - keep at end of file
+
+eval "$(starship init zsh)"

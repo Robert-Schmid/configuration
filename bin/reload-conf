@@ -27,7 +27,15 @@ mv -f ~/configuration/config/git/.gitconfig ~/configuration/config/git/gitconfig
 
 #nu 
 
-cp ~/.config/nu/config.toml ~/configuration/config/nu
+#cp ~/.config/nu/config.toml ~/configuration/config/nu
+
+# zsh
+
+cp ~/.zshrc ~/configuration/config/zsh/
+mv ~/configuration/config/zsh/.zshrc ~/configuration/config/zsh/zshrc
+
+cp ~/.zshenv ~/configuration/config/zsh/
+mv ~/configuration/config/zsh/.zshenv ~/configuration/config/zsh/zshenv
 
 # ssh
 

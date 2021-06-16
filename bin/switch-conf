@@ -42,7 +42,15 @@ mv $home/gitconfig $home/.gitconfig
 
 # nu
 
-cp $from/nu/config.toml $to/nu/
+#cp $from/nu/config.toml $to/nu/
+
+# zsh
+
+cp $from/zsh/zshrc $home/
+mv $home/zshrc $home/.zshrc
+
+cp $from/zsh/zshenv $home/
+mv $home/zshenv $home/.zshenv
 
 # ssh
 
