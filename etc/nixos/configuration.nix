@@ -128,8 +128,8 @@
       "docker"
 #      "games"
 #      "lxd"
-#      "networkmanager"
-      "sway"
+      "networkmanager"
+#      "sway"
 #      "vboxusers"
 #      "video"
       "wheel"
@@ -152,7 +152,7 @@
 
 
   # Networking
-#  networking.networkmanager.enable = true;
+  networking.networkmanager.enable = true;
 
   # The global useDHCP flag is deprecated, therefore explicitly set to false here.
   # Per-interface useDHCP will be mandatory in the future, so this generated config
@@ -166,7 +166,7 @@
 
 
   # SSH
-#  services.openssh.enable = true;
+  services.openssh.enable = true;
 
 
   # Printing
@@ -215,6 +215,7 @@
 
     desktopManager = {
       xterm.enable = false;
+      gnome.enable = true;
     };
 
     displayManager = {
@@ -231,6 +232,8 @@
       ];
     };
   };
+
+  services.udev.packages = with pkgs; [ gnome3.gnome-settings-daemon ];
 
 
  # Packages ───────────────────────────────────────────────────────────────────
@@ -363,6 +366,10 @@
 
     # Networking
     networkmanager # https://wiki.gnome.org/Projects/NetworkManager
+    openvpn
+    openconnect
+    networkmanager-openconnect
+    networkmanagerapplet
 
     # Audio
     pavucontrol # https://freedesktop.org/software/pulseaudio/pavucontrol/
