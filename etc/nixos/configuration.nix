@@ -356,6 +356,7 @@
     # Document viewers ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
     zathura # https://pwmt.org/projects/zathura/
+    feh # image viewer and wallpaper
 
     # Document converters
 #    pandoc # https://pandoc.org
@@ -418,6 +419,7 @@
 
     kubectl # https://kubernetes.io/docs/reference/kubectl/overview/
     docker # https://docker.com
+    minikube
 #    appimage-run # https://github.com/NixOS/nixpkgs/tree/master/pkgs/tools/package-management/appimage-run
 
     # Android ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
