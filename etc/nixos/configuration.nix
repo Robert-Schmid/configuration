@@ -379,24 +379,13 @@
 #    light # https://haikarainen.github.io/light/
 #    redshift-wlr # http://jonls.dk/redshift/ (Wayland patch)
 
-    # Wayland ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+    # X11 ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
-    # Wayland
-#    wayland # https://wayland.freedesktop.org
-#    xwayland # https://wayland.freedesktop.org/xserver.html
+    # Compositor
+    picom # https://github.com/yshui/picom
 
-    # Sway
-#    sway # https://swaywm.org
-#    swaybg # https://github.com/swaywm/swaybg
-#    swayidle # https://github.com/swaywm/swayidle
-#    swaylock # https://github.com/swaywm/swaylock
-
-    # Services
-#    kanshi # Output configuration – https://wayland.emersion.fr/kanshi/
-#    mako # Notifications – https://wayland.emersion.fr/mako/
-
-    # Clipboard
-#    wl-clipboard # https://github.com/bugaevc/wl-clipboard
+    # Color scheme and Wallpaper
+    pywal # https://github.com/dylanaraps/pywal/
 
     # Screenshots
 #    grim # https://wayland.emersion.fr/grim/
