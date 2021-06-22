@@ -103,7 +103,9 @@ compinit
 # Discord
   alias Di="fork Discord"
 
+# kubernetes auto complete
+[[ /run/current-system/sw/bin/kubectl ]] && source <(kubectl completion zsh)
+
 # Starship Prompt - keep at end of file
 
 eval "$(starship init zsh)"
-[[ /run/current-system/sw/bin/kubectl ]] && source <(kubectl completion zsh)
