@@ -55,12 +55,11 @@
 
   # AdBlock via /etc/hosts
   # https://github.com/StevenBlack/hosts
-  {
-    networking.extraHosts = let
-      hostsPath = https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling-social/hosts;
-      hostsFile = builtins.fetchurl hostsPath;
-    in builtins.readFile "${hostsFile}";
-  }
+  networking.extraHosts = let
+    hostsPath = https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling-social/hosts;
+    hostsFile = builtins.fetchurl hostsPath;
+  in builtins.readFile "${hostsFile}";
+
 
   # Set your time zone.
   time.timeZone = "Europe/Berlin";
