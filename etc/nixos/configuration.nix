@@ -55,8 +55,12 @@
 
   # AdBlock via /etc/hosts
   # https://github.com/StevenBlack/hosts
-#  networking.extraHosts = builtins.readFile /home/taupiqueur/repositories/github.com/StevenBlack/hosts/hosts;
-
+  {
+    networking.extraHosts = let
+      hostsPath = https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling-social/hosts;
+      hostsFile = builtins.fetchurl hostsPath;
+    in builtins.readFile "${hostsFile}";
+  }
 
   # Set your time zone.
   time.timeZone = "Europe/Berlin";
@@ -69,7 +73,7 @@
 
   # Security
   # Do not prompt for password
-#  security.sudo.wheelNeedsPassword = false;
+  security.sudo.wheelNeedsPassword = false;
 
 
   # Optimization – Speed-up builds
@@ -100,7 +104,7 @@
 
 
   # Clean temporary files during boot
-#  boot.cleanTmpDir = true;
+  boot.cleanTmpDir = true;
 
   # Boot ───────────────────────────────────────────────────────────────────────
 
