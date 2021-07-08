@@ -56,7 +56,7 @@
   # AdBlock via /etc/hosts
   # https://github.com/StevenBlack/hosts
   networking.extraHosts = let
-    hostsPath = https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling-social/hosts;
+    hostsPath = https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling/hosts;
     hostsFile = builtins.fetchurl hostsPath;
   in builtins.readFile "${hostsFile}";
 
@@ -421,8 +421,8 @@
     # Tools ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
     # Archivers
-#    archiver # https://github.com/mholt/archiver
-#    zip # http://info-zip.org
+    archiver # https://github.com/mholt/archiver
+    zip # http://info-zip.org
 
     # Programming languages
 #    jq # https://stedolan.github.io/jq/
