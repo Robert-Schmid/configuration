@@ -33,7 +33,7 @@ compinit
 # https://nixos.org
   alias nix-update="sudo nixos-rebuild switch"
   alias nix-upgrade="sudo nixos-rebuild switch --upgrade --keep-going --fallback"
-  alias nix-gc="sudo nix-collect-garbage --delete-old"
+  alias nix-gc="sudo nix-collect-garbage --delete-older-than 30d"
 
 # Sleep
   alias z="sudo systemctl suspend"
