@@ -3,7 +3,7 @@
   email = robert.schmid4@gmail.com
 
 [core]
-  editor = neovim
+  editor = kak
 
 [alias]
   st = status
