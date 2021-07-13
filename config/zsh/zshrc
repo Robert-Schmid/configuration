@@ -36,7 +36,7 @@ compinit
   alias nix-gc="sudo nix-collect-garbage --delete-older-than 30d"
 
 # Sleep
-  alias z="sudo systemctl suspend"
+  alias z="docker stop $(docker ps -q) && sudo systemctl suspend"
   #alias zz="swaymsg exit"
   alias zzz="sudo shutdown now"
 
