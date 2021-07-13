@@ -81,12 +81,13 @@ compinit
   alias gist="gh gist create --web"
   alias gv="gh repo view --web"
   gc () {
-     gh repo clone $1 `~/repositories/github.com/{{$1}}`
+     gh repo clone $1 ~/repositories/github.com/$1
   }
+  alias gh="cd ~/repositories/github.com/Robert-Schmid/"
 
 # Broot
 # https://dystroy.org/broot/
-  #alias br = broot
+  alias br="broot"
 
 # exa
 # https://the.exa.website
