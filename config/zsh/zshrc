@@ -83,7 +83,7 @@ compinit
   gc () {
      gh repo clone $1 ~/repositories/github.com/$1
   }
-  alias gh="cd ~/repositories/github.com/Robert-Schmid/"
+  alias ghome="cd ~/repositories/github.com/Robert-Schmid/"
 
 # Broot
 # https://dystroy.org/broot/
