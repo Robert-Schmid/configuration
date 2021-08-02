@@ -172,6 +172,9 @@
   services.openssh.enable = true;
 
 
+  # Development Environments
+  services.lorri.enable = true;
+
   # Printing
 #  services.printing.enable = true;
 
@@ -291,9 +294,14 @@
 
     # Shells ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
-    unstable.nushell # https://nushell.sh
+    #unstable.nushell # https://nushell.sh
 #    dash # http://gondor.apana.org.au/~herbert/dash/
     zsh
+
+    # Path Managment
+    lorri
+    direnv
+    niv
 
     # Shell prompts
     starship # https://starship.rs
@@ -329,7 +337,7 @@
 
     # IRC ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
-#    thelounge # https://thelounge.chat
+    thelounge # https://thelounge.chat
 
     # E-Books ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
@@ -337,7 +345,7 @@
 
     # Web browsers ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
-    chromium # https://chromium.org
+    #chromium # https://chromium.org
     google-chrome # https://google.com/chrome/
     # firefox # https://mozilla.org/firefox/
 
@@ -479,9 +487,9 @@
 
     # Rust
     # https://rust-lang.org
-    rustc
-    cargo # https://crates.io
-    rustup # https://rustup.rs
+    #rustc
+    #cargo # https://crates.io
+    #rustup # https://rustup.rs
 
     # JavaScript
 #    nodejs_latest # https://nodejs.org
@@ -490,8 +498,8 @@
 
     # Python
     # https://python.org
-    python39
-    python39Packages.pip # https://pip.pypa.io
+    #python39
+    #python39Packages.pip # https://pip.pypa.io
 
     # Haskell
     # https://haskell.org
