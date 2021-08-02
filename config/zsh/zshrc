@@ -110,3 +110,7 @@ compinit
 # Starship Prompt - keep at end of file
 
 eval "$(starship init zsh)"
+
+# Hook for direnv for lorri
+
+eval "$(direnv hook zsh)"
