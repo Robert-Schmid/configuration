@@ -13,6 +13,7 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+
 # Aliases
   alias @=fork
   alias p=echo
@@ -27,13 +28,13 @@ compinit
 
 # Document Viewer
 # https://pwmt.org/projects/zathura/
-  alias doc="fork zathura"
+#  alias doc="fork zathura"
 
 # NixOS
 # https://nixos.org
-  alias nix-update="sudo nixos-rebuild switch"
-  alias nix-upgrade="sudo nixos-rebuild switch --upgrade --keep-going --fallback"
-  alias nix-gc="sudo nix-collect-garbage --delete-older-than 30d"
+#  alias nix-update="sudo nixos-rebuild switch"
+#  alias nix-upgrade="sudo nixos-rebuild switch --upgrade --keep-going --fallback"
+#  alias nix-gc="sudo nix-collect-garbage --delete-older-than 30d"
 
 # Sleep
   alias z="sudo systemctl suspend"
@@ -98,11 +99,6 @@ compinit
   alias T="exa --tree"
   alias ta="exa --tree --all"
 
-# Web browser
-  alias b="fork google-chrome-stable"
-
-# Discord
-  alias Di="fork Discord"
 
 # kubernetes auto complete
 [[ /run/current-system/sw/bin/kubectl ]] && source <(kubectl completion zsh)
@@ -113,4 +109,6 @@ eval "$(starship init zsh)"
 
 # Hook for direnv for lorri
 
-eval "$(direnv hook zsh)"
+#eval "$(direnv hook zsh)"
+
+if [ -e /home/robert/.nix-profile/etc/profile.d/nix.sh ]; then . /home/robert/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer

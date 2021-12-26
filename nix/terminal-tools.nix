@@ -1,5 +1,7 @@
 # https://search.nixos.org/packages
 
+# install with nix-env -if 'this-file'
+
 let
   pkgs = import <nixpkgs> {};
   inherit (pkgs) buildEnv;
@@ -33,21 +35,17 @@ in buildEnv {
 
     # Shells ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
-    zsh
-
     # Path Managment
     lorri
     direnv
     niv
 
-    # Shell prompts
-    starship # https://starship.rs
 
     # Text editors ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
-    kakoune # https://kakoune.org
+  #  kakoune # https://kakoune.org
 #    kak-lsp # https://github.com/kak-lsp/kak-lsp
-    neovim # https://neovim.io/ 
+
 
     # File managers ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
@@ -81,11 +79,6 @@ in buildEnv {
     file # https://darwinsys.com/file/
 #    socat # http://www.dest-unreach.org/socat/
 
-    # Filesystem
-#    gparted # https://gparted.org
-#    gptfdisk # https://rodsbooks.com/gdisk/
-#    exfat
-#    ntfs3g
   ];
 }
 

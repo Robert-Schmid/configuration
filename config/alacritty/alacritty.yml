@@ -5,7 +5,28 @@
 # Appearance ───────────────────────────────────────────────────────────────────
 
 # Add a bit of transparency to reduce eye strain.
-#background_opacity: 0.90
+background_opacity: 0.95
 
 font:
-  size: 12.0
+  normal:
+    family: Fira Code
+    style: Regular
+
+  bold:
+    family: Fira Code
+    style: Bold
+
+  italic:
+    family: Fira Code
+    style: Italic
+
+  bold_italic:
+    family: Fira Code
+    style: Bold Italic
+
+  size: 13
+  
+env:
+  LC_ALL: "en_US.UTF-8"
+  
+

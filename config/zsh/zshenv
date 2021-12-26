@@ -1,4 +1,4 @@
-export EDITOR=kak
+export EDITOR=nvim
 export BROWSER=google-chrome-stable
 
 export PATH=/home/robert/configuration/bin:/home/robert/.local/bin:$PATH

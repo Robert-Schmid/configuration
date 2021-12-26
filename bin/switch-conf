@@ -1,48 +1,29 @@
 #!/bin/sh
 
-# needs root for nix configuration
-# thus set a home dir
+# set a home dir
 
 home=/home/robert
 
-### etc files
-
-from=/home/robert/configuration/etc
-to=/etc
-
-# nixos
-
-sudo cp $from/nixos/configuration.nix $to/nixos/
 
 ### config files
 
 from=/home/robert/configuration/config
 to=/home/robert/.config
 
-# sway
 
-#sudo cp $from/sway/config $to/sway/
+# kitty
 
-# i3
-
-cp $from/i3/config $to/i3
-
-# alacritty
-
-cp $from/alacritty/alacritty.yml $to/alacritty/
+cp $from/kitty/kitty.conf $to/kitty/
+cp $from/kitty/afterglow.conf $to/kitty/
 
 # broot
 
-cp $from/broot/conf.toml $to/broot/
+cp $from/broot/conf.hjson $to/broot/
 
 # git
 
 cp $from/git/gitconfig $home/
 mv $home/gitconfig $home/.gitconfig
-
-# nu
-
-#cp $from/nu/config.toml $to/nu/
 
 # zsh
 
@@ -54,4 +35,4 @@ mv $home/zshenv $home/.zshenv
 
 # ssh
 
-cp $from/ssh/config $home/.ssh
+#cp $from/ssh/config $home/.ssh

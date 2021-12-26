@@ -1,33 +1,20 @@
 #!/bin/sh
 
-# nixos
-
-cp /etc/nixos/configuration.nix ~/configuration/etc/nixos
-
-# sway
-
-#cp -f ~/.config/sway/config ~/configuration/config/sway
-
-# i3
-
-cp ~/.config/i3/config ~/configuration/config/i3
 
 # alacritty
 
-cp ~/.config/alacritty/alacritty.yml ~/configuration/config/alacritty
+cp ~/.config/kitty/kitty.conf ~/configuration/config/kitty
+cp ~/.config/kitty/afterglow.conf ~/configuration/config/kitty
 
 # broot
 
-cp ~/.config/broot/conf.toml ~/configuration/config/broot
+cp ~/.config/broot/conf.hjson ~/configuration/config/broot
 
 # git
 
 cp ~/.gitconfig ~/configuration/config/git
 mv -f ~/configuration/config/git/.gitconfig ~/configuration/config/git/gitconfig
 
-#nu 
-
-#cp ~/.config/nu/config.toml ~/configuration/config/nu
 
 # zsh
 
@@ -39,4 +26,4 @@ mv ~/configuration/config/zsh/.zshenv ~/configuration/config/zsh/zshenv
 
 # ssh
 
-cp ~/.ssh/config ~/configuration/config/ssh
+#cp ~/.ssh/config ~/configuration/config/ssh
