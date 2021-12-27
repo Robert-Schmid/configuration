@@ -12,3 +12,6 @@
   ci = commit
   cm = commit --message
   co = checkout
+[credential "https://github.com"]
+	helper = 
+	helper = !/nix/store/chxbz48vggmyr0jm9cwykfzdf8qbwwi3-gh-2.4.0/bin/gh auth git-credential
