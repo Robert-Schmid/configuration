@@ -1,4 +1,8 @@
 export EDITOR=nvim
 export BROWSER=google-chrome-stable
 
-export PATH=/home/robert/configuration/bin:/home/robert/.local/bin:$PATH
+export PATH=/home/robert/configuration/bin:$PATH
+
+export PATH=/home/robert/.local/bin:$PATH
+
+export PATH=/opt/anaconda/bin:$PATH
